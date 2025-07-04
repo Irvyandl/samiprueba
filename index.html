@@ -15,7 +15,7 @@
   </header>
 
   <main>
-    <section class="carousel-section">
+    <section class="carousel-section reduced-height">
       <div class="carousel auto-carousel">
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Slide 1" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Slide 2" />
@@ -57,7 +57,7 @@
   </main>
 
   <footer>
-    <p>&copy; © 2025 Irvin Prado. Ascende Superius – Seek Higher Things</p>
+    <p>&copy; 2025 Irvin Prado. Ascende Superius – Seek Higher Things</p>
     <div class="footer-links">
       <a href="#">Privacy Policy</a> |
       <a href="#">Terms of Use</a>
@@ -109,7 +109,10 @@
       padding-top: 100px;
     }
     .carousel-section {
-      padding: 2rem;
+      padding: 1rem;
+    }
+    .reduced-height {
+      padding-bottom: 0;
     }
     .carousel {
       display: flex;
@@ -119,17 +122,17 @@
     }
     .carousel img {
       flex: 0 0 auto;
-      width: 17%;
-      min-width: 150px;
+      width: 12%;
+      min-width: 100px;
       object-fit: cover;
       border-radius: 12px;
     }
     .blurred img {
-      filter: blur(2.5px); /* final blur at 25% original */
+      filter: blur(2.5px);
     }
     .social-section {
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 2rem 1rem;
     }
     .social-links a {
       display: inline-block;
