@@ -2,109 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Template</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212; /* fondo negro gris */
-      color: #eee;
-    }
-    .sticky-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #1f1f1f;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-      z-index: 999;
-      color: #fff;
-    }
-    main {
-      padding-top: 80px;
-    }
-    .carousel-section {
-      padding: 1rem 2rem;
-    }
-    .carousel {
-      display: flex;
-      gap: 0.5rem;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      width: 100%;
-      padding: 0.5rem 0;
-      scrollbar-width: thin;
-      scrollbar-color: #555 #222;
-    }
-    .carousel::-webkit-scrollbar {
-      height: 8px;
-    }
-    .carousel::-webkit-scrollbar-track {
-      background: #222;
-    }
-    .carousel::-webkit-scrollbar-thumb {
-      background-color: #555;
-      border-radius: 4px;
-    }
-    .carousel img {
-      flex: 0 0 auto;
-      width: 180px; /* más pequeño */
-      height: auto;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .blurred img {
-      filter: blur(15px);
-    }
-    .social-section {
-      text-align: center;
-      padding: 1rem 2rem;
-    }
-    .social-links a {
-      display: inline-block;
-      margin: 0.4rem;
-      padding: 0.6rem 1.2rem;
-      background: #333;
-      color: #eee;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-      font-weight: 600;
-    }
-    .social-links a:hover {
-      background: #555;
-    }
-    footer {
-      background: #1f1f1f;
-      text-align: center;
-      padding: 1.5rem 2rem;
-      font-size: 0.9rem;
-      color: #bbb;
-    }
-    .footer-links a {
-      color: #bbb;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="sticky-header">
-    <h1>YOUR NAME HERE</h1>
+    <h1>SAMII</h1>
   </header>
 
   <main>
     <section class="carousel-section">
-      <div class="carousel" id="carousel1">
+      <div class="carousel auto-carousel">
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Slide 1" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Slide 2" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Slide 3" />
@@ -114,6 +26,7 @@
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Slide 7" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Slide 8" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Slide 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_20-32-21.jpg?raw=true" alt="Slide 10" />
       </div>
     </section>
 
@@ -128,26 +41,124 @@
     </section>
 
     <section class="carousel-section blurred">
-      <div class="carousel" id="carousel2">
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 1" />
+      <div class="carousel auto-carousel">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Blurred 1" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Blurred 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Blurred 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Blurred 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Blurred 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Blurred 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Blurred 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Blurred 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Blurred 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Blurred 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Blurred 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Blurred 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Blurred 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Blurred 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_20-32-21.jpg?raw=true" alt="Blurred 10" />
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; © 2025 Irvin Prado. Ascende Superius – Seek Higher Things</p>
     <div class="footer-links">
       <a href="#">Privacy Policy</a> |
       <a href="#">Terms of Use</a>
     </div>
   </footer>
+
+  <script>
+    // Auto carousel - smooth continuous scroll
+    const autoCarousels = document.querySelectorAll('.auto-carousel');
+    autoCarousels.forEach(carousel => {
+      let scrollAmount = 0;
+      const speed = 0.72; // 20% faster than last version
+      function step() {
+        scrollAmount += speed;
+        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+          scrollAmount = 0;
+        }
+        carousel.scrollLeft = scrollAmount;
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #eee;
+      overflow-y: scroll;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      z-index: 999;
+      color: #fff;
+    }
+    main {
+      padding-top: 100px;
+    }
+    .carousel-section {
+      padding: 2rem;
+    }
+    .carousel {
+      display: flex;
+      gap: 6rem;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    .carousel img {
+      flex: 0 0 auto;
+      width: 17%;
+      min-width: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .blurred img {
+      filter: blur(2.5px); /* final blur at 25% original */
+    }
+    .social-section {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #333;
+      color: #eee;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #555;
+    }
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </body>
 </html>
