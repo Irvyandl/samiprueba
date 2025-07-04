@@ -152,4 +152,158 @@
       text-decoration: underline;
     }
   </style></body>
+</html><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAMII</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-header">
+    <h1>SAMII</h1>
+  </header>  <main>
+    <section class="carousel-section reduced-height">
+      <div class="carousel auto-carousel">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Slide 1" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Slide 2" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Slide 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Slide 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Slide 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Slide 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Slide 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Slide 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Slide 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_20-32-21.jpg?raw=true" alt="Slide 10" />
+      </div>
+    </section><section class="social-section">
+  <h2>MY EXCLUSIVE CONTENT</h2>
+  <div class="social-links">
+    <a href="#">OnlyFans FREE</a>
+    <a href="#">OnlyFans VIP</a>
+    <a href="#">Telegram</a>
+    <a href="#">Instagram</a>
+  </div>
+</section>
+
+<section class="carousel-section blurred">
+  <div class="carousel auto-carousel">
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Blurred 1" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Blurred 2" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Blurred 3" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Blurred 4" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Blurred 5" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Blurred 6" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Blurred 7" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Blurred 8" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 9" />
+    <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_20-32-21.jpg?raw=true" alt="Blurred 10" />
+  </div>
+</section>
+
+  </main>  <footer>
+    <p>&copy; 2025 Irvin Prado. Ascende Superius – Seek Higher Things</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a>
+    </div>
+  </footer>  <script>
+    const autoCarousels = document.querySelectorAll('.auto-carousel');
+    autoCarousels.forEach(carousel => {
+      let scrollAmount = 0;
+      const speed = 0.72;
+      function step() {
+        scrollAmount += speed;
+        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+          scrollAmount = 0;
+        }
+        carousel.scrollLeft = scrollAmount;
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  </script>  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #eee;
+      overflow-y: scroll;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      z-index: 999;
+      color: #fff;
+    }
+    main {
+      padding-top: 100px;
+    }
+    .carousel-section {
+      padding: 1rem;
+    }
+    .reduced-height {
+      padding-bottom: 0;
+    }
+    .carousel {
+      display: flex;
+      gap: 6rem;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    .carousel img {
+      flex: 0 0 auto;
+      width: 12%;
+      min-width: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .blurred img {
+      filter: blur(2.5px);
+    }
+    .social-section {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #333;
+      color: #eee;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #555;
+    }
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style></body>
 </html>
