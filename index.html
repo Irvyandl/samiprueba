@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Template</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-header">
+    <h1>YOUR NAME HERE</h1>
+  </header>
+
+  <main>
+    <section class="carousel-section">
+      <div class="carousel auto-carousel">
+        <img src="images/image1.jpg" alt="Slide 1" />
+        <img src="images/image2.jpg" alt="Slide 2" />
+        <img src="images/image3.jpg" alt="Slide 3" />
+        <img src="images/image4.jpg" alt="Slide 4" />
+        <img src="images/image5.jpg" alt="Slide 5" />
+        <img src="images/image6.jpg" alt="Slide 6" />
+        <img src="images/image7.jpg" alt="Slide 7" />
+        <img src="images/image8.jpg" alt="Slide 8" />
+        <img src="images/image9.jpg" alt="Slide 9" />
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h2>MY EXCLUSIVE CONTENT</h2>
+      <div class="social-links">
+        <a href="#">OnlyFans FREE</a>
+        <a href="#">OnlyFans VIP</a>
+        <a href="#">Telegram</a>
+        <a href="#">Instagram</a>
+      </div>
+    </section>
+
+    <section class="carousel-section blurred">
+      <div class="carousel">
+        <img src="images/blurred1.jpg" alt="Blurred 1" />
+        <img src="images/blurred2.jpg" alt="Blurred 2" />
+        <img src="images/blurred3.jpg" alt="Blurred 3" />
+        <img src="images/blurred4.jpg" alt="Blurred 4" />
+        <img src="images/blurred5.jpg" alt="Blurred 5" />
+        <img src="images/blurred6.jpg" alt="Blurred 6" />
+        <img src="images/blurred7.jpg" alt="Blurred 7" />
+        <img src="images/blurred8.jpg" alt="Blurred 8" />
+        <img src="images/blurred9.jpg" alt="Blurred 9" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a>
+    </div>
+  </footer>
+
+  <script>
+    // Auto carousel
+    const autoCarousels = document.querySelectorAll('.auto-carousel');
+    autoCarousels.forEach(carousel => {
+      let index = 0;
+      const images = carousel.querySelectorAll('img');
+      setInterval(() => {
+        images.forEach(img => img.style.display = 'none');
+        images[index].style.display = 'block';
+        index = (index + 1) % images.length;
+      }, 2000);
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+    }
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    main {
+      padding-top: 80px;
+    }
+    .carousel-section {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      max-width: 800px;
+      height: auto;
+    }
+    .carousel img {
+      display: none;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .carousel img:first-child {
+      display: block;
+    }
+    .blurred img {
+      filter: blur(5px);
+    }
+    .social-section {
+      text-align: center;
+      padding: 2rem;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #444;
+    }
+    footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-links a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</body>
+</html>
