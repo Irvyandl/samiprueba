@@ -2,80 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Personal Template</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="sticky-header">
-    <h1>YOUR NAME HERE</h1>
-  </header>
-
-  <main>
-    <section class="carousel-section">
-      <div class="carousel auto-carousel">
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Slide 1" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Slide 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Slide 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Slide 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Slide 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Slide 6" />
-        <img src="ihttps://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Slide 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Slide 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Slide 9" />
-      </div>
-    </section>
-
-    <section class="social-section">
-      <h2>MY EXCLUSIVE CONTENT</h2>
-      <div class="social-links">
-        <a href="#">OnlyFans FREE</a>
-        <a href="#">OnlyFans VIP</a>
-        <a href="#">Telegram</a>
-        <a href="#">Instagram</a>
-      </div>
-    </section>
-
-    <section class="carousel-section blurred">
-      <div class="carousel">
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 1" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 9" />
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Terms of Use</a>
-    </div>
-  </footer>
-
-  <script>
-    // Auto carousel
-    const autoCarousels = document.querySelectorAll('.auto-carousel');
-    autoCarousels.forEach(carousel => {
-      let index = 0;
-      const images = carousel.querySelectorAll('img');
-      setInterval(() => {
-        images.forEach(img => img.style.display = 'none');
-        images[index].style.display = 'block';
-        index = (index + 1) % images.length;
-      }, 2000);
-    });
-  </script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Outfit', sans-serif;
@@ -99,28 +30,27 @@
     }
     .carousel-section {
       padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
     .carousel {
       display: flex;
+      gap: 1rem;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
       width: 100%;
-      overflow: hidden;
-      max-width: 800px;
-      height: auto;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
     }
     .carousel img {
-      display: none;
+      flex: 0 0 auto;
       width: 100%;
+      max-width: 350px;
       height: auto;
       object-fit: cover;
-    }
-    .carousel img:first-child {
-      display: block;
+      border-radius: 12px;
+      scroll-snap-align: center;
     }
     .blurred img {
-      filter: blur(5px);
+      filter: blur(15px);
     }
     .social-section {
       text-align: center;
@@ -151,5 +81,79 @@
       margin: 0 0.5rem;
     }
   </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <h1>YOUR NAME HERE</h1>
+  </header>
+
+  <main>
+    <section class="carousel-section">
+      <div class="carousel auto-carousel" id="carousel1">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-08.jpg?raw=true" alt="Slide 1" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Slide 2" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Slide 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Slide 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Slide 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Slide 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Slide 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Slide 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Slide 9" />
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h2>MY EXCLUSIVE CONTENT</h2>
+      <div class="social-links">
+        <a href="#">OnlyFans FREE</a>
+        <a href="#">OnlyFans VIP</a>
+        <a href="#">Telegram</a>
+        <a href="#">Instagram</a>
+      </div>
+    </section>
+
+    <section class="carousel-section blurred">
+      <div class="carousel auto-carousel" id="carousel2">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 1" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-28.jpg?raw=true" alt="Blurred 2" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-37.jpg?raw=true" alt="Blurred 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-01.jpg?raw=true" alt="Blurred 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-49.jpg?raw=true" alt="Blurred 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-08.jpg?raw=true" alt="Blurred 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-45-12.jpg?raw=true" alt="Blurred 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-43-52.jpg?raw=true" alt="Blurred 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/photo_2025-07-03_19-44-22.jpg?raw=true" alt="Blurred 9" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a>
+    </div>
+  </footer>
+
+  <script>
+    // Auto scroll for carousels
+    function autoScrollCarousel(carousel) {
+      let scrollAmount = 0;
+      const speed = 1; // pixels per interval
+      const interval = 20; // ms
+
+      setInterval(() => {
+        scrollAmount += speed;
+        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+          scrollAmount = 0;
+        }
+        carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+      }, interval);
+    }
+
+    document.querySelectorAll('.auto-carousel').forEach(carousel => {
+      autoScrollCarousel(carousel);
+    });
+  </script>
 </body>
 </html>
