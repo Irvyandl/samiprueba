@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +7,155 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #fff0f6, #f0f4ff);
+      color: #2d2d2d;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sticky-header {
+      font-family: 'Playfair Display', serif;
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 0.75rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    main {
+      padding-top: 20px;
+    }
+
+    .carousel-section {
+      padding: 0.8rem;
+    }
+
+    .reduced-height {
+      padding-bottom: 0;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 1.4rem;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .carousel img {
+      width: 176px;
+      border-radius: 16px;
+      border: 2px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+
+    .blurred img {
+      filter: blur(4px);
+      opacity: 0.7;
+    }
+
+    .social-section {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .social-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #e91e63;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #555;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .footer-links a {
+      color: #2f528f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .overlay-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .overlay-content img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 36px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
 </head>
+
 <body>
   <div id="overlay" class="hidden">
     <div class="overlay-content">
@@ -19,19 +168,13 @@
     <h1>Your name will be here</h1>
   </header>
 
-  <main id="main-content">
+  <main>
     <section class="carousel-section reduced-height">
       <div class="carousel auto-carousel">
+        <!-- Repite o cambia imágenes si deseas -->
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 1" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 9" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 10" />
+        <!-- ... -->
       </div>
     </section>
 
@@ -47,16 +190,10 @@
 
     <section class="carousel-section blurred">
       <div class="carousel auto-carousel">
+        <!-- Repite o cambia imágenes si deseas -->
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 1" />
         <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 9" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 10" />
+        <!-- ... -->
       </div>
     </section>
   </main>
@@ -85,161 +222,29 @@
       requestAnimationFrame(step);
     });
 
+    const images = document.querySelectorAll('.carousel img');
     const overlay = document.getElementById('overlay');
     const overlayImage = document.getElementById('overlay-image');
     const closeBtn = document.getElementById('close-overlay');
-    const images = document.querySelectorAll('.carousel img');
-    const mainContent = document.getElementById('main-content');
 
     images.forEach(img => {
       img.addEventListener('click', () => {
         overlayImage.src = img.src;
         overlay.classList.remove('hidden');
-        mainContent.classList.add('blurred-bg');
       });
     });
 
     closeBtn.addEventListener('click', () => {
       overlay.classList.add('hidden');
       overlayImage.src = '';
-      mainContent.classList.remove('blurred-bg');
     });
 
-    overlay.addEventListener('click', e => {
+    overlay.addEventListener('click', (e) => {
       if (e.target === overlay) {
         overlay.classList.add('hidden');
         overlayImage.src = '';
-        mainContent.classList.remove('blurred-bg');
       }
     });
   </script>
-
-  <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(135deg, #fff0f6, #f0f4ff);
-      color: #2d2d2d;
-      margin: 0;
-      padding: 0;
-    }
-    .sticky-header {
-      font-family: 'Playfair Display', serif;
-      background: #ffffffcc;
-      backdrop-filter: blur(8px);
-      padding: 0.75rem;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    main {
-      padding-top: 20px;
-    }
-    .carousel-section {
-      padding: 0.8rem;
-    }
-    .reduced-height {
-      padding-bottom: 0;
-    }
-    .carousel {
-      display: flex;
-      gap: 1.4rem;
-      overflow-x: hidden;
-      width: 100%;
-    }
-    .carousel img {
-      width: 176px;
-      border-radius: 16px;
-      border: 2px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-      cursor: pointer;
-    }
-    .blurred img {
-      filter: blur(4px);
-      opacity: 0.7;
-    }
-    .social-section {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .social-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-    .social-links a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #e91e63;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .social-links a:hover {
-      background: #c2185b;
-      transform: scale(1.05);
-    }
-    footer {
-      background: #fff;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
-      color: #555;
-      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .footer-links a {
-      color: #2f528f;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-    .blurred-bg {
-      filter: blur(10px);
-      transition: filter 0.3s ease;
-    }
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
-    .hidden {
-      display: none;
-    }
-    .overlay-content {
-      position: relative;
-    }
-    .overlay-content img {
-      max-width: 80vw;
-      max-height: 90vh;
-      border-radius: 18px;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s;
-    }
-    .close-btn {
-      position: absolute;
-      top: -30px;
-      right: -30px;
-      font-size: 2rem;
-      color: white;
-      background: rgba(0,0,0,0.6);
-      border-radius: 50%;
-      padding: 0.2rem 0.6rem;
-      cursor: pointer;
-      user-select: none;
-    }
-  </style>
 </body>
-  </html>
+</html>
