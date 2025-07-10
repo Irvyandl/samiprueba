@@ -15,7 +15,6 @@
       margin: 0;
       padding: 0;
     }
-
     .sticky-header {
       font-family: 'Playfair Display', serif;
       background: #ffffffcc;
@@ -27,26 +26,21 @@
       top: 0;
       z-index: 1000;
     }
-
     main {
       padding-top: 20px;
     }
-
     .carousel-section {
       padding: 0.8rem;
     }
-
     .reduced-height {
       padding-bottom: 0;
     }
-
     .carousel {
       display: flex;
       gap: 1.4rem;
       overflow-x: hidden;
       width: 100%;
     }
-
     .carousel img {
       width: 176px;
       border-radius: 16px;
@@ -54,23 +48,19 @@
       box-shadow: 0 3px 6px rgba(0,0,0,0.08);
       cursor: pointer;
     }
-
     .blurred img {
       filter: blur(4px);
       opacity: 0.7;
     }
-
     .social-section {
       text-align: center;
       padding: 2rem 1rem;
     }
-
     .social-section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
-
     .social-links a {
       display: inline-block;
       margin: 0.5rem;
@@ -82,12 +72,10 @@
       font-weight: 600;
       transition: transform 0.3s, background 0.3s;
     }
-
     .social-links a:hover {
       background: #c2185b;
       transform: scale(1.05);
     }
-
     footer {
       background: #fff;
       text-align: center;
@@ -96,13 +84,11 @@
       color: #555;
       box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
     }
-
     .footer-links a {
       color: #2f528f;
       text-decoration: none;
       font-weight: bold;
     }
-
     .footer-links a:hover {
       text-decoration: underline;
     }
@@ -113,45 +99,130 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0,0,0,0.6);
       backdrop-filter: blur(8px);
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       z-index: 9999;
+    }
+    #overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
       overflow: auto;
     }
-
-    .overlay-content {
-      position: relative;
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .overlay-content img {
-      display: block;
-      max-width: 100%;
-      max-height: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.2);
-      margin: auto;
-    }
-
-    .overlay-content img.blurred {
-      filter: blur(4px);
-      opacity: 0.7;
-    }
-
-    .close-btn {
+    #overlay .close-btn {
       position: absolute;
-      top: -30px;
-      right: -30px;
-      background: #fff;
-      color: #000;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.7rem;
       border-radius: 50%;
-      font-size: 1.5rem;
-      width: 36px;
-      height: 36px;
-      text-align: center;
-      line-height: 36px;
-      cursor: pointer
+    }
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <span class="close-btn">&times;</span>
+    <img id="overlay-image" src="" alt="Expanded image">
+  </div>
+
+  <header class="sticky-header">
+    <h1>Your name will be here</h1>
+  </header>
+
+  <main>
+    <section class="carousel-section reduced-height">
+      <div class="carousel auto-carousel">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 1" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 2" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 10" />
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h2>✨ See More of Me ✨</h2>
+      <div class="social-links">
+        <a href="#">Your FREE OnlyFans</a>
+        <a href="#">Your VIP OnlyFans</a>
+        <a href="#">Your Telegram Link</a>
+        <a href="#">Your Instagram</a>
+      </div>
+    </section>
+
+    <section class="carousel-section blurred">
+      <div class="carousel auto-carousel blurred">
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 1" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 2" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 3" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 4" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 5" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 6" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 7" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 8" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 9" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 10" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Irvin Prado. <em>Ascende Superius – Seek Higher Things</em></p>
+    <div class="footer-links">
+      <a href="https://irvyandl.github.io/PageDesignWithIrvin/" target="_blank" rel="noopener noreferrer">Do you want a website like this? Click here!</a>
+    </div>
+  </footer>
+
+  <script>
+    const autoCarousels = document.querySelectorAll('.auto-carousel');
+    autoCarousels.forEach(carousel => {
+      const speed = 1.35;
+      const clone = carousel.innerHTML;
+      carousel.innerHTML += clone;
+
+      let scrollLeft = 0;
+      const maxScroll = carousel.scrollWidth / 2;
+
+      function step() {
+        scrollLeft += speed;
+        if (scrollLeft >= maxScroll) {
+          scrollLeft = 0;
+        }
+        carousel.scrollLeft = scrollLeft;
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const closeBtn = document.querySelector('.close-btn');
+
+    document.querySelectorAll('.carousel img').forEach(img => {
+      img.addEventListener('click', () => {
+        overlayImage.src = img.src;
+        overlayImage.style.filter = img.closest('.blurred') ? 'blur(4px)' : 'none';
+        overlay.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      overlayImage.src = '';
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        ove
