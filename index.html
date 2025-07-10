@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -57,9 +58,15 @@
     }
     .social-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 5.1rem;
+      font-size: 4.9rem;
       margin-bottom: 1.5rem;
-      line-height: 1.1;
+      line-height: 1;
+      word-break: break-word;
+    }
+    @media (max-width: 768px) {
+      .social-section h2 {
+        font-size: 2.2rem;
+      }
     }
     .social-links a {
       display: inline-block;
@@ -75,6 +82,24 @@
     .social-links a:hover {
       background: #c2185b;
       transform: scale(1.05);
+    }
+    .icon-links {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .icon-links img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      filter: brightness(0);
+    }
+    .icon-links img:hover {
+      transform: scale(1.15);
+      filter: brightness(0.2);
     }
     footer {
       background: #fff;
@@ -92,8 +117,6 @@
     .footer-links a:hover {
       text-decoration: underline;
     }
-
-    /* Overlay */
     #overlay {
       display: none;
       position: fixed;
@@ -126,12 +149,6 @@
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-
-    @media (max-width: 768px) {
-      .social-section h2 {
-        font-size: 1.8rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -142,16 +159,16 @@
   <main>
     <section class="carousel-section reduced-height">
       <div class="carousel auto-carousel">
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 1" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 9" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Slide 10" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
       </div>
     </section>
 
@@ -163,20 +180,28 @@
         <a href="#">Your Telegram Link</a>
         <a href="#">Your Instagram</a>
       </div>
+      <div class="icon-links">
+        <a href="https://x.com/tucuenta" target="_blank" rel="noopener noreferrer">
+          <img src="https://raw.githubusercontent.com/Irvyandl/samiprueba/0f138c95262d539dfdfb217e40e60659aeba5305/assets/x-twitter-brands.svg" alt="X link" />
+        </a>
+        <a href="https://instagram.com/tucuenta" target="_blank" rel="noopener noreferrer">
+          <img src="https://raw.githubusercontent.com/Irvyandl/samiprueba/0f138c95262d539dfdfb217e40e60659aeba5305/assets/instagram-brands-solid.svg" alt="Instagram link" />
+        </a>
+      </div>
     </section>
 
     <section class="carousel-section blurred">
       <div class="carousel auto-carousel blurred">
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 1" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 2" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 3" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 4" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 5" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 6" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 7" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 8" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 9" />
-        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" alt="Blurred 10" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
+        <img src="https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true" />
       </div>
     </section>
   </main>
@@ -219,24 +244,4 @@
           overlayImage.src = e.target.src;
           const isBlurred = e.target.closest('.blurred');
           overlayImage.style.filter = isBlurred ? 'blur(4px)' : 'none';
-          overlay.style.display = 'flex';
-        }
-      });
-    }
-
-    document.querySelectorAll('.auto-carousel').forEach(setupCarousel);
-
-    closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      overlayImage.src = '';
-    });
-
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.style.display = 'none';
-        overlayImage.src = '';
-      }
-    });
-  </script>
-</body>
-</html>
+          overlay.style
