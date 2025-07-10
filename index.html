@@ -93,45 +93,42 @@
       text-decoration: underline;
     }
 
+    /* Overlay */
     #overlay {
+      display: none;
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(8px);
-      display: none;
+      background-color: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
-    #overlay img {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    #overlay-image {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 20px;
       overflow: auto;
+      object-fit: contain;
     }
-    #overlay .close-btn {
+    .close-btn {
       position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-      background: rgba(0,0,0,0.3);
-      padding: 0.2rem 0.7rem;
+      top: 1rem;
+      right: 1rem;
+      background: #fff;
+      border: none;
       border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <div id="overlay">
-    <span class="close-btn">&times;</span>
-    <img id="overlay-image" src="" alt="Expanded image">
-  </div>
-
   <header class="sticky-header">
     <h1>Your name will be here</h1>
   </header>
@@ -185,13 +182,19 @@
     </div>
   </footer>
 
-  <script>
-    const autoCarousels = document.querySelectorAll('.auto-carousel');
-    autoCarousels.forEach(carousel => {
-      const speed = 1.35;
-      const clone = carousel.innerHTML;
-      carousel.innerHTML += clone;
+  <div id="overlay">
+    <button class="close-btn">&times;</button>
+    <img id="overlay-image" src="" alt="Full size" />
+  </div>
 
+  <script>
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const closeBtn = document.querySelector('.close-btn');
+
+    function setupCarousel(carousel) {
+      const speed = 1.35;
+      carousel.innerHTML += carousel.innerHTML;
       let scrollLeft = 0;
       const maxScroll = carousel.scrollWidth / 2;
 
@@ -204,19 +207,18 @@
         requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
-    });
 
-    const overlay = document.getElementById('overlay');
-    const overlayImage = document.getElementById('overlay-image');
-    const closeBtn = document.querySelector('.close-btn');
-
-    document.querySelectorAll('.carousel img').forEach(img => {
-      img.addEventListener('click', () => {
-        overlayImage.src = img.src;
-        overlayImage.style.filter = img.closest('.blurred') ? 'blur(4px)' : 'none';
-        overlay.style.display = 'flex';
+      carousel.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+          overlayImage.src = e.target.src;
+          const isBlurred = e.target.closest('.blurred');
+          overlayImage.style.filter = isBlurred ? 'blur(4px)' : 'none';
+          overlay.style.display = 'flex';
+        }
       });
-    });
+    }
+
+    document.querySelectorAll('.auto-carousel').forEach(setupCarousel);
 
     closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none';
@@ -225,4 +227,10 @@
 
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) {
-        ove
+        overlay.style.display = 'none';
+        overlayImage.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
