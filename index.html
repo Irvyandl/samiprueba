@@ -10,7 +10,8 @@
 <body>
   <div id="overlay" class="hidden">
     <div class="overlay-content">
-      <img id="overlay-image" src="" alt="Ampliada">
+      <span class="close-btn" id="close-overlay">✕</span>
+      <img id="overlay-image" src="" alt="Ampliada" />
     </div>
   </div>
 
@@ -84,9 +85,10 @@
       requestAnimationFrame(step);
     });
 
-    const images = document.querySelectorAll('.carousel img');
     const overlay = document.getElementById('overlay');
     const overlayImage = document.getElementById('overlay-image');
+    const closeBtn = document.getElementById('close-overlay');
+    const images = document.querySelectorAll('.carousel img');
     const mainContent = document.getElementById('main-content');
 
     images.forEach(img => {
@@ -97,11 +99,17 @@
       });
     });
 
-    overlay.addEventListener('click', (e) => {
-      if (e.target !== overlayImage) {
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      overlayImage.src = '';
+      mainContent.classList.remove('blurred-bg');
+    });
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) {
         overlay.classList.add('hidden');
+        overlayImage.src = '';
         mainContent.classList.remove('blurred-bg');
-        overlayImage.src = "";
       }
     });
   </script>
@@ -191,7 +199,6 @@
     .footer-links a:hover {
       text-decoration: underline;
     }
-
     .blurred-bg {
       filter: blur(10px);
       transition: filter 0.3s ease;
@@ -211,12 +218,27 @@
     .hidden {
       display: none;
     }
+    .overlay-content {
+      position: relative;
+    }
     .overlay-content img {
       max-width: 80vw;
       max-height: 90vh;
       border-radius: 18px;
       box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s;
+    }
+    .close-btn {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      font-size: 2rem;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      border-radius: 50%;
+      padding: 0.2rem 0.6rem;
+      cursor: pointer;
+      user-select: none;
     }
   </style>
 </body>
