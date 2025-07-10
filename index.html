@@ -64,14 +64,19 @@
   <script>
     const autoCarousels = document.querySelectorAll('.auto-carousel');
     autoCarousels.forEach(carousel => {
-      let scrollAmount = 0;
       const speed = 1.35;
+      const clone = carousel.innerHTML;
+      carousel.innerHTML += clone; // duplicate images to create infinite scroll illusion
+
+      let scrollLeft = 0;
+      const maxScroll = carousel.scrollWidth / 2; // only scroll through the original set
+
       function step() {
-        scrollAmount += speed;
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-          scrollAmount = 0;
+        scrollLeft += speed;
+        if (scrollLeft >= maxScroll) {
+          scrollLeft = 0;
         }
-        carousel.scrollLeft = scrollAmount;
+        carousel.scrollLeft = scrollLeft;
         requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
@@ -164,4 +169,4 @@
     }
   </style>
 </body>
-  </html>
+</html>
