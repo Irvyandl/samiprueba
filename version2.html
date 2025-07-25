@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Descúbreme | Link Oficial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .carousel-wrapper {
+      overflow: hidden;
+      position: relative;
+      margin: 1rem 0;
+    }
+    .carousel {
+      display: flex;
+      gap: 1rem;
+      animation: scrollCarousel 28s linear infinite;
+      width: max-content;
+    }
+    .carousel img {
+      height: 250px;
+      border-radius: 1rem;
+      object-fit: cover;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    @keyframes scrollCarousel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .buttons a {
+      background: #ff0066;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .buttons a:hover {
+      background: #ff3385;
+      transform: scale(1.05);
+    }
+    .icon-links img:hover {
+      transform: scale(1.15);
+      filter: brightness(0.2);
+    }
+    .icon-description {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+    .icon-links a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .blurred {
+      filter: blur(12px);
+      transition: filter 0.3s;
+    }
+    .blurred:hover {
+      filter: blur(3px);
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 1rem;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: #ff66a3;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer img {
+      width: 36px;
+      height: 36px;
+      opacity: 0.7;
+      transition: transform 0.3s;
+    }
+    footer img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Bienvenid@ a mi mundo exclusivo</h1>
+    <p>Mira un adelanto... 🔥</p>
+
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel1"></div>
+    </div>
+
+    <div class="buttons">
+      <a href="#">🔗 Sígueme en Instagram</a>
+      <a href="#">💋 Contenido diario en X</a>
+      <a href="#">📲 Únete a mi canal Telegram</a>
+      <a href="#">🔞 Entra a mi OnlyFans (Gratis)</a>
+    </div>
+
+    <section class="icon-links">
+      <a href="https://irvyandl.github.io/PageDesignWithIrvin/?utm_source=Seb%27s+Web&utm_medium=Telegram" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/Irvyandl/Esteban/8c5b6bf40efff787fa204c3ec5423a30e1f804c5/Assets/free_icon_1%20(1).svg" alt="Crea tu web" />
+       <div class="icon-description">crea tu propia web aquí!</div>
+      </a>
+    </section>
+
+    <p>¿Te atreves a ir más allá? 😭</p>
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel2"></div>
+    </div>
+
+    <p class="note">*Desbloquea todo el contenido en mis redes o OnlyFans*</p>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="preview">
+  </div>
+
+  <footer>
+   <p>&copy; 2025 Irvin Prado. <em>Ascende Superius – Seek Higher Things</em></p>
+    <p>✨ ¿Quieres un sitio así?
+      <a href="https://irvyandl.github.io/PageDesignWithIrvin/" target="_blank" rel="noopener noreferrer">
+        Click aquí!
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    const demoImage = "https://github.com/Irvyandl/samiprueba/blob/main/assets/5150161878557765601.jpg?raw=true";
+
+    const carousel1 = document.getElementById('carousel1');
+    const carousel2 = document.getElementById('carousel2');
+
+    function createInfiniteCarousel(container, blurred = false) {
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < 20; i++) {
+        const img = document.createElement('img');
+        img.src = demoImage;
+        img.alt = 'carousel item';
+        if (blurred) img.classList.add('blurred');
+        fragment.appendChild(img);
+      }
+      container.appendChild(fragment);
+    }
+
+    createInfiniteCarousel(carousel1);
+    createInfiniteCarousel(carousel2, true);
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.carousel img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.style.filter = img.classList.contains('blurred') ? 'blur(12px)' : 'none';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
